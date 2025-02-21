@@ -7,18 +7,20 @@ import { TrpcService } from './trpc.service';
 export class TrpcRoute {
   constructor(private readonly trpc: TrpcService) {}
 
-  appRouter = this.trpc.router({
-    hello: this.trpc.procedure
-      .input(
-        z.object({
-          name: z.string().optional(),
+  get appRouter() {
+    return this.trpc.router({
+      hello: this.trpc.procedure
+        .input(
+          z.object({
+            name: z.string().optional(),
+          }),
+        )
+        .query(({ input }) => {
+          const { name = 'World' } = input;
+          return `Hello ${name}`;
         }),
-      )
-      .query(({ input }) => {
-        const { name } = input;
-        return `Hello ${name}`;
-      }),
-  });
+    });
+  }
 
   async applyMiddleware(app: INestApplication) {
     app.use(
