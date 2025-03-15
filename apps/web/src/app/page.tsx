@@ -1,6 +1,5 @@
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Headers/Header";
-import ProductCategory from "../components/HomePage/Category/ProductCategory";
 import HeroSlider from "../components/HomePage/HeroPage/HeroSlider";
 import DealProducts from "../components/HomePage/Products/DealProducts";
 import PopulerProducts from "../components/HomePage/Products/PopulerProducts";
@@ -13,7 +12,7 @@ export default function Home() {
       <Header />
       {/* <MobileHeader /> */}
       <HeroSlider />
-      <ProductCategory />
+      {/* <ProductCategory /> */}
       <PopulerProducts />
       <ProductsBanner />
       <ServicePage />

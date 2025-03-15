@@ -8,6 +8,8 @@ import "../../public/assets/css/vendor/owl.carousel.min.css";
 import "../../public/assets/css/vendor/range-slider.css";
 import "../../public/assets/css/vendor/slick-theme.css";
 import "../../public/assets/css/vendor/swiper-bundle.min.css";
+
+import "../../public/assets/css/style.css";
 import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
