@@ -6,6 +6,7 @@ import DealProducts from "../components/HomePage/Products/DealProducts";
 import PopulerProducts from "../components/HomePage/Products/PopulerProducts";
 import ProductsBanner from "../components/HomePage/ProductsBanner/ProductsBanner";
 import ServicePage from "../components/HomePage/ServicePage/ServicePage";
+import ExternalScript from "./ExternalScript";
 export default function Home() {
   return (
     <div>
@@ -18,6 +19,7 @@ export default function Home() {
       <ServicePage />
       <DealProducts />
       <Footer />
+      <ExternalScript />
     </div>
   );
 }

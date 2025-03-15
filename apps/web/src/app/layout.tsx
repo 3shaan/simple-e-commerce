@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import "../../public/assets/css/vendor/aos.min.css";
+import "../../public/assets/css/vendor/flaticons.css";
+import "../../public/assets/css/vendor/jquery.slick.css";
+import "../../public/assets/css/vendor/materialdesignicons.min.css";
+import "../../public/assets/css/vendor/owl.carousel.min.css";
+import "../../public/assets/css/vendor/range-slider.css";
+import "../../public/assets/css/vendor/slick-theme.css";
+import "../../public/assets/css/vendor/swiper-bundle.min.css";
 import "./globals.css";
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
