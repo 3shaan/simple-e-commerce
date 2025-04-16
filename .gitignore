@@ -2,3 +2,7 @@ node_modules
 dist
 build
 .env
+package-lock.json
+pnpm-lock.yaml
+apps/web/pnpm-lock.yaml
+pnpm-lock.yaml

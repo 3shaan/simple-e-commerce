@@ -10,6 +10,11 @@ import "../../public/assets/css/vendor/slick-theme.css";
 import "../../public/assets/css/vendor/swiper-bundle.min.css";
 
 import "../../public/assets/css/style.css";
+import Footer from "../components/Footer/Footer";
+import TapToTop from "../components/Footer/TapToTop";
+import Header from "../components/Headers/Header";
+import MobileHeader from "../components/Headers/MobileHeader";
+import ExternalScript from "./ExternalScript";
 import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,7 +41,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Header />
+        <MobileHeader />
         {children}
+        <Footer />
+        <TapToTop />
+        <ExternalScript />
       </body>
     </html>
   );

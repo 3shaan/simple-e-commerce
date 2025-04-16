@@ -7,7 +7,7 @@ const ExternalScript = () => {
       <Script src="/assets/js/vendor/owl.carousel.min.js" />
       <Script src="/assets/js/vendor/swiper-bundle.min.js" />
       <Script src="/assets/js/vendor/aos.min.js" />
-      <Script src="/assets/js/vendor/countdownTimer.js" />
+      {/* <Script src="/assets/js/vendor/countdownTimer.js" /> */}
       <Script src="/assets/js/vendor/jquery.zoom.min.js" />
 
       <Script src="/assets/js/vendor/mixitup.min.js" />
