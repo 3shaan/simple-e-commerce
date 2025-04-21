@@ -1,6 +1,16 @@
+"use client";
+import MixitUp from "./MixitUp";
 const PopulerProducts = () => {
+  const categories = [
+    { id: "all", label: "All" },
+    { id: "snack", label: "Snack" },
+    { id: "vegetable", label: "Vegetable" },
+    { id: "fruit", label: "Fruit" },
+    { id: "bakery", label: "Bakery" },
+  ];
   return (
     <div>
+      <MixitUp />
       <section className="section-popular-product-shape relative pb-[100px] max-[1199px]:pb-[70px]">
         <div
           className="popular-product-container flex flex-wrap justify-between relative items-center mx-auto min-[1600px]:max-w-[1500px] min-[1400px]:max-w-[1320px] min-[1200px]:max-w-[1140px] min-[992px]:max-w-[960px] min-[768px]:max-w-[720px] min-[576px]:max-w-[540px]"
@@ -33,36 +43,17 @@ const PopulerProducts = () => {
                 <div className="min-[992px]:w-full w-[50%] max-[480px]:w-full px-[12px] mb-[24px]">
                   <div className="cr-product-tabs">
                     <ul>
-                      <li
-                        className="py-[12px] px-[15px] relative bg-[#f7f7f8] font-Poppins text-[14px] font-bold leading-[1.667] text-[#2b2b2d] border-[1px] border-solid border-[#e9e9e9] rounded-[5px] cursor-pointer max-[991px]:p-[15px] mb-[5px] max-[1399px]:mb-[3px] max-[1199px]:mb-[5px] active"
-                        data-filter="all"
-                      >
-                        All
-                      </li>
-                      <li
-                        className="py-[12px] px-[15px] relative bg-[#f7f7f8] font-Poppins text-[14px] font-bold leading-[1.667] text-[#2b2b2d] border-[1px] border-solid border-[#e9e9e9] rounded-[5px] cursor-pointer max-[991px]:p-[15px] mb-[5px] max-[1399px]:mb-[3px] max-[1199px]:mb-[5px]"
-                        data-filter=".snack"
-                      >
-                        Snack
-                      </li>
-                      <li
-                        className="py-[12px] px-[15px] relative bg-[#f7f7f8] font-Poppins text-[14px] font-bold leading-[1.667] text-[#2b2b2d] border-[1px] border-solid border-[#e9e9e9] rounded-[5px] cursor-pointer max-[991px]:p-[15px] mb-[5px] max-[1399px]:mb-[3px] max-[1199px]:mb-[5px]"
-                        data-filter=".vegetable"
-                      >
-                        Vegetable
-                      </li>
-                      <li
-                        className="py-[12px] px-[15px] relative bg-[#f7f7f8] font-Poppins text-[14px] font-bold leading-[1.667] text-[#2b2b2d] border-[1px] border-solid border-[#e9e9e9] rounded-[5px] cursor-pointer max-[991px]:p-[15px] mb-[5px] max-[1399px]:mb-[3px] max-[1199px]:mb-[5px]"
-                        data-filter=".fruit"
-                      >
-                        Fruit
-                      </li>
-                      <li
-                        className="py-[12px] px-[15px] relative bg-[#f7f7f8] font-Poppins text-[14px] font-bold leading-[1.667] text-[#2b2b2d] border-[1px] border-solid border-[#e9e9e9] rounded-[5px] cursor-pointer max-[991px]:p-[15px]"
-                        data-filter=".bakery"
-                      >
-                        Bakery
-                      </li>
+                      {categories.map((category) => (
+                        <li
+                          key={category.id}
+                          className="py-[12px] px-[15px] relative bg-[#f7f7f8] font-Poppins text-[14px] font-bold leading-[1.667] text-[#2b2b2d] border-[1px] border-solid border-[#e9e9e9] rounded-[5px] cursor-pointer max-[991px]:p-[15px] mb-[5px] max-[1399px]:mb-[3px] max-[1199px]:mb-[5px]active  mixitup-control-active"
+                          data-filter={
+                            category.id === "all" ? "all" : `.${category.id}`
+                          }
+                        >
+                          {category.label}
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>
@@ -160,7 +151,7 @@ const PopulerProducts = () => {
                     </div>
                   </div>
                 </div>
-                <div className="mix snack min-[1400px]:w-[25%] min-[1200px]:w-[33.33%] w-[50%] max-[480px]:w-full px-[12px] mb-[24px]">
+                <div className="mix snack1 min-[1400px]:w-[25%] min-[1200px]:w-[33.33%] w-[50%] max-[480px]:w-full px-[12px] mb-[24px]">
                   <div className="cr-product-card h-full p-[12px] border-[1px] border-solid border-[#e9e9e9] bg-[#fff] rounded-[5px] overflow-hidden flex-col max-[480px]:w-full">
                     <div className="cr-product-image rounded-[5px] flex items-center justify-center relative">
                       <div className="cr-image-inner zoom-image-hover w-full h-full flex items-center justify-center relative overflow-hidden max-[991px]:pointer-events-none">
