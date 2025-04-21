@@ -6,16 +6,12 @@ import ServicePage from "../components/HomePage/ServicePage/ServicePage";
 export default function Home() {
   return (
     <div>
-      {/* <Header /> */}
-      {/* <MobileHeader /> */}
       <HeroSlider />
       {/* <ProductCategory /> */}
       <PopulerProducts />
       <ProductsBanner />
       <ServicePage />
       <DealProducts />
-      {/* <Footer /> */}
-      {/* <ExternalScript /> */}
     </div>
   );
 }
