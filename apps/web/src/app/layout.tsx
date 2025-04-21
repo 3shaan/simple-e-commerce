@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import "../../public/assets/css/vendor/animate.css";
 import "../../public/assets/css/vendor/aos.min.css";
 import "../../public/assets/css/vendor/flaticons.css";
 import "../../public/assets/css/vendor/jquery.slick.css";
 import "../../public/assets/css/vendor/materialdesignicons.min.css";
 import "../../public/assets/css/vendor/owl.carousel.min.css";
 import "../../public/assets/css/vendor/range-slider.css";
+import "../../public/assets/css/vendor/remixicon.css";
 import "../../public/assets/css/vendor/slick-theme.css";
 import "../../public/assets/css/vendor/swiper-bundle.min.css";
 
+// import "../../public/assets/css/color-3.css";
+import "../../public/assets/css/demo-2.css";
 import "../../public/assets/css/style.css";
 import Footer from "../components/Footer/Footer";
 import TapToTop from "../components/Footer/TapToTop";
