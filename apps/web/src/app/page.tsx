@@ -1,8 +1,6 @@
-import HeroSlider from "../components/HomePage/HeroPage/HeroSlider";
-import DealProducts from "../components/HomePage/Products/DealProducts";
-import PopulerProducts from "../components/HomePage/Products/PopulerProducts";
-import ProductsBanner from "../components/HomePage/ProductsBanner/ProductsBanner";
-import ServicePage from "../components/HomePage/ServicePage/ServicePage";
+import HeroSlider from "@/components/HomePage/HeroPage/HeroSlider";
+import PopulerProducts from "@/components/HomePage/Products/PopulerProducts";
+import ProductsBanner from "@/components/HomePage/ProductsBanner/ProductsBanner";
 export default function Home() {
   return (
     <div>
@@ -10,8 +8,8 @@ export default function Home() {
       {/* <ProductCategory /> */}
       <PopulerProducts />
       <ProductsBanner />
-      <ServicePage />
-      <DealProducts />
+      {/* <ServicePage />
+      // {/* <DealProducts /> */}
     </div>
   );
 }

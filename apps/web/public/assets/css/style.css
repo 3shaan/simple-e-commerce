@@ -1366,7 +1366,7 @@ ul.navbar-nav .dropdown:hover .dropdown-menu {
 }
 
 .cr-product-tabs ul .active {
-  color: #64b496 !important;
+  /* color: #64b496 !important; */
 }
 .cr-product-tabs ul li:after {
   font-family: remixicon;

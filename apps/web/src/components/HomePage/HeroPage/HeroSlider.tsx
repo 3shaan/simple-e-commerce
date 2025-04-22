@@ -43,9 +43,10 @@ const HeroSlider = () => {
               <div
                 className={`cr-hero-banner cr-banner-image-${
                   index === 0 ? "two" : "one"
-                } w-full bg-[url('${
-                  slide.image
-                }')] bg-no-repeat bg-cover bg-center h-[80vh] max-[1199px]:h-[600px] max-[767px]:h-[500px] max-[480px]:h-[400px] max-[360px]:h-[350px] relative z-[1]`}
+                } w-full
+                  bg-no-repeat bg-cover bg-center h-[80vh] max-[1199px]:h-[600px] max-[767px]:h-[500px] max-[480px]:h-[400px] max-[360px]:h-[350px] relative z-[1]
+                `}
+                style={{ backgroundImage: `url(${slide.image})` }}
               >
                 <div className="flex hero-container flex-wrap justify-between relative items-center mx-auto min-[1600px]:max-w-[1500px] min-[1400px]:max-w-[1320px] min-[1200px]:max-w-[1140px] min-[992px]:max-w-[960px] min-[768px]:max-w-[720px] min-[576px]:max-w-[540px]">
                   <div className="flex flex-wrap w-full">
