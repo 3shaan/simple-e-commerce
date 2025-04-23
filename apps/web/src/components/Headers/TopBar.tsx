@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import SearchBar from "./SearchBar";
 
 const TopBar = () => {
@@ -8,8 +9,8 @@ const TopBar = () => {
         <div className="flex flex-wrap w-full">
           <div className="w-full px-[12px]">
             <div className="top-header py-[20px] flex flex-row gap-[10px] justify-between border-b-[1px] border-solid border-[#e9e9e9] relative z-[4] max-[575px]:py-[15px] max-[575px]:block">
-              <a
-                href="index.html"
+              <Link
+                href="/"
                 className="cr-logo max-[575px]:mb-[15px] max-[575px]:flex max-[575px]:justify-center"
               >
                 <Image
@@ -26,7 +27,7 @@ const TopBar = () => {
                   width={100}
                   height={100}
                 />
-              </a>
+              </Link>
 
               <SearchBar />
 

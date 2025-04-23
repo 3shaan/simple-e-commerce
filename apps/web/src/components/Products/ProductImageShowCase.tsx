@@ -4,10 +4,11 @@ import { useState } from "react";
 import ImageZoom from "./ImageZoom";
 // Import Swiper components and styles
 import "swiper/css";
+import "swiper/css/autoplay";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import { Autoplay, FreeMode, Navigation, Thumbs } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const ProductImageShowCase = () => {
@@ -73,8 +74,12 @@ const ProductImageShowCase = () => {
             slidesPerView={4}
             freeMode={true}
             watchSlidesProgress={true}
-            modules={[FreeMode, Navigation, Thumbs]}
+            modules={[FreeMode, Navigation, Thumbs, Autoplay]}
             className="thumb-images-slider"
+            autoplay={{
+              delay: 1000,
+              disableOnInteraction: false,
+            }}
           >
             {productImages.map((img) => (
               <SwiperSlide key={img.id}>
