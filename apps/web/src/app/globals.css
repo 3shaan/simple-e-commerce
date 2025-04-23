@@ -30,3 +30,7 @@
   color: white;
   border-color: #64b496;
 }
+
+.container {
+  max-width: 1400px;
+}

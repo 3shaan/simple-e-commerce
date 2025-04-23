@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Footer = () => {
   return (
     <div>
@@ -7,15 +9,19 @@ const Footer = () => {
             <div className="min-[1200px]:w-[33.33%] min-[992px]:w-[50%] min-[576px]:w-full w-full px-[12px] cr-footer-border">
               <div className="cr-footer-logo max-w-[400px] mb-[15px] pb-[0]">
                 <div className="image pb-[15px]">
-                  <img
-                    src="assets/img/logo/logo.png"
+                  <Image
+                    src="/assets/img/logo/logo.png"
                     alt="logo"
                     className="logo w-[100px] block"
+                    width={100}
+                    height={100}
                   />
-                  <img
-                    src="assets/img/logo/dark-logo.png"
+                  <Image
+                    src="/assets/img/logo/dark-logo.png"
                     alt="logo"
                     className="dark-logo w-[100px] hidden"
+                    width={100}
+                    height={100}
                   />
                 </div>
                 <p className="font-Poppins text-[14px] text-[#7a7a7a] mb-[0] leading-[1.75]">
@@ -229,80 +235,96 @@ const Footer = () => {
                     <div className="swiper-wrapper">
                       <div className="swiper-slide">
                         <a href="#" className="cr-payment-image relative flex">
-                          <img
-                            src="assets/img/insta/1.jpg"
+                          <Image
+                            src="/assets/img/insta/1.jpg"
                             alt="insta"
                             className="w-full rounded-[5px]"
+                            width={100}
+                            height={100}
                           />
                           <div className="payment-overlay transition-all duration-[0.3s] ease-in-out rounded-[5px] w-full h-full absolute top-[0] left-[0]" />
                         </a>
                       </div>
                       <div className="swiper-slide">
                         <a href="#" className="cr-payment-image relative flex">
-                          <img
-                            src="assets/img/insta/2.jpg"
+                          <Image
+                            src="/assets/img/insta/2.jpg"
                             alt="insta"
                             className="w-full rounded-[5px]"
+                            width={100}
+                            height={100}
                           />
                           <div className="payment-overlay transition-all duration-[0.3s] ease-in-out rounded-[5px] w-full h-full absolute top-[0] left-[0]" />
                         </a>
                       </div>
                       <div className="swiper-slide">
                         <a href="#" className="cr-payment-image relative flex">
-                          <img
-                            src="assets/img/insta/3.jpg"
+                          <Image
+                            src="/assets/img/insta/3.jpg"
                             alt="insta"
                             className="w-full rounded-[5px]"
+                            width={100}
+                            height={100}
                           />
                           <div className="payment-overlay transition-all duration-[0.3s] ease-in-out rounded-[5px] w-full h-full absolute top-[0] left-[0]" />
                         </a>
                       </div>
                       <div className="swiper-slide">
                         <a href="#" className="cr-payment-image relative flex">
-                          <img
-                            src="assets/img/insta/4.jpg"
+                          <Image
+                            src="/assets/img/insta/4.jpg"
                             alt="insta"
                             className="w-full rounded-[5px]"
+                            width={100}
+                            height={100}
                           />
                           <div className="payment-overlay transition-all duration-[0.3s] ease-in-out rounded-[5px] w-full h-full absolute top-[0] left-[0]" />
                         </a>
                       </div>
                       <div className="swiper-slide">
                         <a href="#" className="cr-payment-image relative flex">
-                          <img
-                            src="assets/img/insta/5.jpg"
+                          <Image
+                            src="/assets/img/insta/5.jpg"
                             alt="insta"
                             className="w-full rounded-[5px]"
+                            width={100}
+                            height={100}
                           />
                           <div className="payment-overlay transition-all duration-[0.3s] ease-in-out rounded-[5px] w-full h-full absolute top-[0] left-[0]" />
                         </a>
                       </div>
                       <div className="swiper-slide">
                         <a href="#" className="cr-payment-image relative flex">
-                          <img
-                            src="assets/img/insta/6.jpg"
+                          <Image
+                            src="/assets/img/insta/6.jpg"
                             alt="insta"
                             className="w-full rounded-[5px]"
+                            width={100}
+                            height={100}
                           />
                           <div className="payment-overlay transition-all duration-[0.3s] ease-in-out rounded-[5px] w-full h-full absolute top-[0] left-[0]" />
                         </a>
                       </div>
                       <div className="swiper-slide">
                         <a href="#" className="cr-payment-image relative flex">
-                          <img
-                            src="assets/img/insta/7.jpg"
+                          <Image
+                            src="/assets/img/insta/7.jpg"
                             alt="insta"
                             className="w-full rounded-[5px]"
+                            width={100}
+                            height={100}
                           />
                           <div className="payment-overlay transition-all duration-[0.3s] ease-in-out rounded-[5px] w-full h-full absolute top-[0] left-[0]" />
                         </a>
                       </div>
                       <div className="swiper-slide">
                         <a href="#" className="cr-payment-image relative flex">
-                          <img
-                            src="assets/img/insta/8.jpg"
+                          <Image
+                            src="/assets/img/insta/8.jpg"
                             alt="insta"
                             className="w-full rounded-[5px]"
+                            width={100}
+                            height={100}
                           />
                           <div className="payment-overlay transition-all duration-[0.3s] ease-in-out rounded-[5px] w-full h-full absolute top-[0] left-[0]" />
                         </a>

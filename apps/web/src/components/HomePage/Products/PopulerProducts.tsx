@@ -1,51 +1,7 @@
+import categoriesData from "@/data/categoryData";
+import productsData from "@/data/productData";
+
 const PopulerProducts = () => {
-  const categories = [
-    { id: "all", label: "All" },
-    { id: "snack", label: "Snack" },
-    { id: "vegetable", label: "Vegetable" },
-    { id: "fruit", label: "Fruit" },
-    { id: "bakery", label: "Bakery" },
-  ];
-
-  const products = [
-    {
-      id: 1,
-      category: "vegetable",
-      name: "Fresh Organic Villa Farm Lomon 500gm Pack",
-      image: "assets/img/product/1.jpg",
-      price: 120.25,
-      oldPrice: 123.25,
-      rating: 4.5,
-    },
-    {
-      id: 2,
-      category: "snack",
-      name: "Best snakes with hazel nut pack 200gm",
-      image: "assets/img/product/9.jpg",
-      price: 145,
-      oldPrice: 150,
-      rating: 5,
-    },
-    {
-      id: 3,
-      category: "fruit",
-      name: "Fresh Organic Apple 1kg Simla Marming",
-      image: "assets/img/product/2.jpg",
-      price: 120.25,
-      oldPrice: 123.25,
-      rating: 4.5,
-    },
-    {
-      id: 4,
-      category: "bakery",
-      name: "Fresh Organic Villa Farm Lomon 500gm Pack",
-      image: "assets/img/product/17.jpg",
-      price: 120.25,
-      oldPrice: 123.25,
-      rating: 4.5,
-    },
-  ];
-
   return (
     <div>
       <section className="section-popular-product-shape relative pb-[100px] max-[1199px]:pb-[70px]">
@@ -80,7 +36,7 @@ const PopulerProducts = () => {
                 <div className="min-[992px]:w-full w-[50%] max-[480px]:w-full px-[12px] mb-[24px]">
                   <div className="cr-product-tabs">
                     <ul>
-                      {categories.map((category) => (
+                      {categoriesData.map((category) => (
                         <li
                           key={category.id}
                           className={`py-[12px] px-[15px] relative bg-[#f7f7f8] font-Poppins text-[14px] font-bold leading-[1.667] text-[#2b2b2d] border-[1px] border-solid border-[#e9e9e9] rounded-[5px] cursor-pointer max-[991px]:p-[15px] mb-[5px] max-[1399px]:mb-[3px] max-[1199px]:mb-[5px]  ${
@@ -126,7 +82,7 @@ const PopulerProducts = () => {
             </div>
             <div className="min-[1200px]:w-[75%] min-[992px]:w-[66.66%] w-full mb-[24px]">
               <div className="flex  flex-wrap w-full mb-[-24px]">
-                {products.map((product) => (
+                {productsData.map((product) => (
                   <div
                     key={product.id}
                     className={`mix ${product.category} min-[1400px]:w-[25%] min-[1200px]:w-[33.33%] w-[50%] max-[480px]:w-full px-[12px] mb-[24px `}

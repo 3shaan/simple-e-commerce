@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SearchBar from "./SearchBar";
 
 const TopBar = () => {
@@ -11,15 +12,19 @@ const TopBar = () => {
                 href="index.html"
                 className="cr-logo max-[575px]:mb-[15px] max-[575px]:flex max-[575px]:justify-center"
               >
-                <img
-                  src="assets/img/logo/logo.png"
+                <Image
+                  src="/assets/img/logo/logo.png"
                   alt="logo"
                   className="logo block h-[35px] w-[115px] max-[575px]:w-[100px]"
+                  width={100}
+                  height={100}
                 />
-                <img
-                  src="assets/img/logo/dark-logo.png"
+                <Image
+                  src="/assets/img/logo/dark-logo.png"
                   alt="logo"
                   className="dark-logo hidden h-[35px] w-[115px] max-[575px]:w-[100px]"
+                  width={100}
+                  height={100}
                 />
               </a>
 

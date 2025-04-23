@@ -12,11 +12,11 @@ import "../../public/assets/css/vendor/slick-theme.css";
 import "../../public/assets/css/vendor/swiper-bundle.min.css";
 
 // import "../../public/assets/css/color-3.css";
+import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Headers/Header";
 import MobileHeader from "@/components/Headers/MobileHeader";
 import "../../public/assets/css/demo-2.css";
 import "../../public/assets/css/style.css";
-import Footer from "../components/Footer/Footer";
 import TapToTop from "../components/Footer/TapToTop";
 import ExternalScript from "./ExternalScript";
 import "./globals.css";
