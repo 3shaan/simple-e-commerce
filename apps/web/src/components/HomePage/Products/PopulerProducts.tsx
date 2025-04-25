@@ -1,7 +1,31 @@
+"use client";
+
 import categoriesData from "@/data/categoryData";
 import productsData from "@/data/productData";
+import { useState } from "react";
+import { ReactMixitup } from "react-mixitup";
 import ProductCard from "./ProductCard";
+
 const PopulerProducts = () => {
+  // Convert products into keys array for mixitup
+  const [keys, setKeys] = useState(() =>
+    productsData.map((product) => product.id)
+  );
+  const [activeCategory, setActiveCategory] = useState("all");
+
+  const handleCategoryClick = (categoryId: string) => {
+    setActiveCategory(categoryId);
+    // Filter products based on category
+    const filteredKeys = productsData
+      .filter(
+        (product) => categoryId === "all" || product.category === categoryId
+      )
+      .map((product) => product.id);
+    setKeys(filteredKeys);
+  };
+
+  const TRANSITION_DURATION = 300;
+
   return (
     <div>
       <section className="section-popular-product-shape relative pb-[100px] max-[1199px]:pb-[70px]">
@@ -42,11 +66,14 @@ const PopulerProducts = () => {
                           className={`py-[12px] px-[15px] relative bg-[#f7f7f8] font-Poppins text-[14px] font-bold leading-[1.667] text-[#2b2b2d] border-[1px] border-solid border-[#e9e9e9] rounded-[5px] cursor-pointer max-[991px]:p-[15px] mb-[5px] max-[1399px]:mb-[3px] max-[1199px]:mb-[5px]  ${
                             category.label === "All" ? "active" : ""
                           }   filter-button `}
-                          data-filter={
-                            category.id === "all" ? "all" : `.${category.id}`
-                          }
                         >
-                          {category.label}
+                          <button
+                            type="button"
+                            className="w-full h-full"
+                            onClick={() => handleCategoryClick(category.id)}
+                          >
+                            {category.label}
+                          </button>
                         </li>
                       ))}
                     </ul>
@@ -81,11 +108,47 @@ const PopulerProducts = () => {
               </div>
             </div>
             <div className="min-[1200px]:w-[75%] min-[992px]:w-[66.66%] w-full mb-[24px]">
-              <div className="flex  flex-wrap w-full mb-[-24px]">
-                {productsData.map((product) => (
-                  <ProductCard key={product.id} product={product} />
-                ))}
-              </div>
+              <ReactMixitup
+                keys={keys}
+                dynamicDirection="vertical"
+                transitionDuration={TRANSITION_DURATION}
+                renderCell={(key, style, ref) => {
+                  const product = productsData.find((p) => p.id === key);
+                  if (!product) return null;
+
+                  return (
+                    <div
+                      key={key}
+                      ref={ref}
+                      style={{
+                        transition: `transform ${TRANSITION_DURATION}ms ease`,
+                        // width: "calc(25% - 24px)",
+                        // margin: "12px",
+                        ...style,
+                      }}
+                      // className="product-card-wrapper " // big screen 4 card, medium screen 3 card, small screen 2 card
+                      className="min-[1400px]:w-[25%] min-[1200px]:w-[33.33%] w-[50%] max-[480px]:w-full px-[12px] mb-[24px]"
+                    >
+                      <ProductCard product={product} />
+                    </div>
+                  );
+                }}
+                renderWrapper={(style, ref, children) => (
+                  <div
+                    style={{
+                      // display: "flex",
+                      // flexWrap: "wrap",
+                      transition: `height ${TRANSITION_DURATION}ms ease`,
+                      // margin: "-12px",
+                      ...style,
+                    }}
+                    ref={ref}
+                    className="flex flex-wrap w-full"
+                  >
+                    {children}
+                  </div>
+                )}
+              />
             </div>
           </div>
         </div>
