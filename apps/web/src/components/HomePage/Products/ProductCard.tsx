@@ -1,5 +1,6 @@
 import ImageZoom from "@/components/Products/ImageZoom";
-import { ProductType } from "@/data/type";
+import type { ProductType } from "@/data/type";
+import Link from "next/link";
 const ProductCard = ({ product }: { product: ProductType }) => {
   return (
     <div
@@ -63,12 +64,12 @@ const ProductCard = ({ product }: { product: ProductType }) => {
               </p>
             </div>
           </div>
-          <a
-            href="product-left-sidebar.html"
+          <Link
+            href={`/products/${product.id}`}
             className="title transition-all duration-[0.3s] ease-in-out mb-[12px] font-Poppins text-[15px] font-medium leading-[24px] text-[#2b2b2d] hover:text-[#64b496] flex justify-center"
           >
             {product.name}
-          </a>
+          </Link>
           <p className="cr-price font-Poppins text-[16px] text-[#7a7a7a] leading-[1.75] max-[1199px]:text-[14px]">
             <span className="new-price font-Poppins text-[16px] leading-[1.75] max-[1199px]:text-[14px] font-bold text-[#64b496]">
               ${product.price}
@@ -77,6 +78,15 @@ const ProductCard = ({ product }: { product: ProductType }) => {
               ${product.oldPrice}
             </span>
           </p>
+          <div className="cr-product-actions">
+            <button
+              type="button"
+              className="w-full h-[35px] bg-[#64b496] text-white rounded-[5px] flex items-center justify-center cursor-pointer"
+            >
+              <i className="ri-shopping-bag-line mr-2" />
+              Add to Cart
+            </button>
+          </div>
         </div>
       </div>
     </div>

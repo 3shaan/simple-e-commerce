@@ -18,7 +18,7 @@ import MobileHeader from "@/components/Headers/MobileHeader";
 import "../../public/assets/css/demo-2.css";
 import "../../public/assets/css/style.css";
 import TapToTop from "../components/Footer/TapToTop";
-import ExternalScript from "./ExternalScript";
+import { AOSInit } from "./AosScript";
 import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -50,7 +50,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <TapToTop />
-        <ExternalScript />
+        <AOSInit />
       </body>
     </html>
   );
