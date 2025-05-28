@@ -13,26 +13,28 @@ export class MenuListRouter {
     private readonly trpcService: TrpcService,
     private readonly menuListService: MenuListService
   ) {}
-  get appRouter() {
-    return this.trpcService.router({
-      findAll: this.trpcService.procedure.query(() => {
-        return this.menuListService.findAll();
+  apply() {
+    return {
+      menuRouter: this.trpcService.router({
+        findAll: this.trpcService.procedure.query(() => {
+          return this.menuListService.findAll();
+        }),
+        create: this.trpcService.procedure
+          .input(createMenuListDto)
+          .mutation(({ input }) => {
+            return this.menuListService.create(input);
+          }),
+        update: this.trpcService.procedure
+          .input(updateMenuListDto)
+          .mutation(({ input }) => {
+            return this.menuListService.update(input);
+          }),
+        delete: this.trpcService.procedure
+          .input(deleteMenuListDto)
+          .mutation(({ input }) => {
+            return this.menuListService.delete(input.id);
+          }),
       }),
-      create: this.trpcService.procedure
-        .input(createMenuListDto)
-        .mutation(({ input }) => {
-          return this.menuListService.create(input);
-        }),
-      update: this.trpcService.procedure
-        .input(updateMenuListDto)
-        .mutation(({ input }) => {
-          return this.menuListService.update(input);
-        }),
-      delete: this.trpcService.procedure
-        .input(deleteMenuListDto)
-        .mutation(({ input }) => {
-          return this.menuListService.delete(input.id);
-        }),
-    });
+    };
   }
 }

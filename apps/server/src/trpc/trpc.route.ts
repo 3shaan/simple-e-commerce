@@ -6,18 +6,18 @@ import { TrpcService } from "./trpc.service";
 @Injectable()
 export class TrpcRoute {
   constructor(
-    private readonly trpc: TrpcService,
+    private readonly trpcService: TrpcService,
     private readonly menuListRouter: MenuListRouter
   ) {}
 
   get appRouter() {
-    return this.trpc.router({
-      menuList: this.menuListRouter.appRouter,
+    return this.trpcService.trpc.router({
+      ...this.menuListRouter.apply(),
     });
   }
 
   async applyMiddleware(app: INestApplication) {
-    app.use(
+    await app.use(
       "/trpc",
       trpcExpress.createExpressMiddleware({ router: this.appRouter })
     );

@@ -1,13 +1,12 @@
-import HeroSlider from "@/components/HomePage/HeroPage/HeroSlider";
-import PopulerProducts from "@/components/HomePage/Products/PopulerProducts";
-import ProductsBanner from "@/components/HomePage/ProductsBanner/ProductsBanner";
+import HeroSlider from "../components/HomePage/HeroPage/HeroSlider";
+
 export default function Home() {
   return (
     <div>
       <HeroSlider />
       {/* <ProductCategory /> */}
-      <PopulerProducts />
-      <ProductsBanner />
+      {/* <PopulerProducts /> */}
+      {/* <ProductsBanner /> */}
       {/* <ServicePage />
       // {/* <DealProducts /> */}
     </div>

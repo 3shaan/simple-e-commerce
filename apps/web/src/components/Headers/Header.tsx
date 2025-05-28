@@ -1,8 +1,12 @@
+"use client";
+import { useTRPC } from "@web/utils/trpc";
 import MobileNavbar from "./MobileNavbar";
 import QuickCategoryShow from "./QuickCategoryShow";
 import TopBar from "./TopBar";
 
 const Header = () => {
+  const menuList = useTRPC().menuRouter;
+  console.log(menuList);
   return (
     <div className="bg-red-500">
       <header className="h-[142px] max-[991px]:h-[133px] max-[575px]:h-[173px] bg-[#fff] border-b-[1px] border-solid border-[#e9e9e9]">

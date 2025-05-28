@@ -12,12 +12,13 @@ import "../../public/assets/css/vendor/slick-theme.css";
 import "../../public/assets/css/vendor/swiper-bundle.min.css";
 
 // import "../../public/assets/css/color-3.css";
-import Footer from "@/components/Footer/Footer";
-import Header from "@/components/Headers/Header";
-import MobileHeader from "@/components/Headers/MobileHeader";
+import Footer from "@web/components/Footer/Footer";
+import TapToTop from "@web/components/Footer/TapToTop";
+import Header from "@web/components/Headers/Header";
+import MobileHeader from "@web/components/Headers/MobileHeader";
+import ReactQueryProvider from "@web/contexts/ReactQueryProvider";
 import "../../public/assets/css/demo-2.css";
 import "../../public/assets/css/style.css";
-import TapToTop from "../components/Footer/TapToTop";
 import { AOSInit } from "./AosScript";
 import "./globals.css";
 const geistSans = Geist({
@@ -45,12 +46,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        <MobileHeader />
-        {children}
-        <Footer />
-        <TapToTop />
-        <AOSInit />
+        <ReactQueryProvider>
+          <Header />
+          <MobileHeader />
+          {children}
+          <Footer />
+          <TapToTop />
+          <AOSInit />
+        </ReactQueryProvider>
       </body>
     </html>
   );

@@ -8,7 +8,7 @@ const menuList: {
 @Injectable()
 export class MenuListService {
   findAll() {
-    return menuList;
+    return [{ id: "1", name: "test" }];
   }
   create(menu: { id: string; name: string }) {
     menuList.push(menu);
