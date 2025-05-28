@@ -6,9 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "pnpm run --parallel dev",
-    "web": "pnpm --filter web dev"
+    "web": "pnpm --filter web dev",
+    "server": "pnpm --filter server dev"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4"
+  }
 }

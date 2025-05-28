@@ -1,10 +1,12 @@
-import { Module } from '@nestjs/common';
-import { TrpcRoute } from './trpc.route';
-import { TrpcService } from './trpc.service';
+import { Global, Module } from "@nestjs/common";
+import { MenuListModule } from "@server/menuList/menuList.module";
+import { TrpcRoute } from "./trpc.route";
+import { TrpcService } from "./trpc.service";
 
+@Global()
 @Module({
-  imports: [],
-  controllers: [],
+  imports: [MenuListModule],
   providers: [TrpcService, TrpcRoute],
+  exports: [TrpcService],
 })
 export class TrpcModule {}

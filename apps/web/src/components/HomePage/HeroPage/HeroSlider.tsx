@@ -25,7 +25,7 @@ const sliderData: SlideContent[] = [
     title: "The best way to stuff your wallet.",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet reiciendis beatae consequuntur.",
-    image: "/assets/img/banner/banner.jpg",
+    image: "/assets/img/banner/banner.png",
     buttonText: "shop now",
     buttonLink: "shop-left-sidebar.html",
   },
