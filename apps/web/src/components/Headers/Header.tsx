@@ -1,18 +1,16 @@
 "use client";
 import { useQuery } from "@tanstack/react-query";
-import { useTRPC } from "@web/utils/trpc";
+import { useTRPC } from "@web/trpc/react";
 import MobileNavbar from "./MobileNavbar";
 import QuickCategoryShow from "./QuickCategoryShow";
 import TopBar from "./TopBar";
 
 const Header = () => {
   const trpc = useTRPC();
-  const { data: menuList } = useQuery({
-    ...trpc.menuRouter.findAll.queryOptions(),
-    staleTime: 4000,
-    placeholderData: [],
-  });
-  console.log(menuList);
+  const { data: menuList } = useQuery(trpc.menuRouter.findAll.queryOptions());
+  console.log("menuList from client", menuList);
+  // console.log(trpc.menuRouter.findAll.queryOptions());
+  // console.log(error);
   return (
     <div className="bg-red-500">
       <header className="h-[142px] max-[991px]:h-[133px] max-[575px]:h-[173px] bg-[#fff] border-b-[1px] border-solid border-[#e9e9e9]">

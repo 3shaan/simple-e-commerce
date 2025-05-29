@@ -14,5 +14,8 @@
   "license": "ISC",
   "devDependencies": {
     "@biomejs/biome": "1.9.4"
+  },
+  "dependencies": {
+    "superjson": "^2.2.2"
   }
 }
