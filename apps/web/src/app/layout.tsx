@@ -16,7 +16,7 @@ import Footer from "@web/components/Footer/Footer";
 import TapToTop from "@web/components/Footer/TapToTop";
 import Header from "@web/components/Headers/Header";
 import MobileHeader from "@web/components/Headers/MobileHeader";
-import ReactQueryProvider from "@web/contexts/ReactQueryProvider";
+import { TRPCReactProvider } from "@web/trpc/react";
 import "../../public/assets/css/demo-2.css";
 import "../../public/assets/css/style.css";
 import { AOSInit } from "./AosScript";
@@ -46,14 +46,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ReactQueryProvider>
+        <TRPCReactProvider>
           <Header />
           <MobileHeader />
           {children}
           <Footer />
           <TapToTop />
           <AOSInit />
-        </ReactQueryProvider>
+        </TRPCReactProvider>
       </body>
     </html>
   );
