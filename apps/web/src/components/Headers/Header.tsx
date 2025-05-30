@@ -7,8 +7,11 @@ import TopBar from "./TopBar";
 
 const Header = () => {
   const trpc = useTRPC();
-  const { data: menuList } = useQuery(trpc.menuRouter.findAll.queryOptions());
-  console.log("menuList from client", menuList);
+  const { data: userList } = useQuery({
+    ...trpc.userRouter.findAll.queryOptions(),
+    placeholderData: [],
+  });
+  console.log("userList from client", userList);
   // console.log(trpc.menuRouter.findAll.queryOptions());
   // console.log(error);
   return (

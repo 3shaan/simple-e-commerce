@@ -11,7 +11,7 @@ export default async function Home() {
   prefetch(trpc.menuRouter.findAll.queryOptions());
   const queryClient = getQueryClient();
   const menuList = await queryClient.fetchQuery(
-    trpc.menuRouter.findAll.queryOptions()
+    trpc.userRouter.findAll.queryOptions()
   );
   console.log(menuList);
   return (
