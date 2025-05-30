@@ -1,5 +1,5 @@
-import ImageZoom from "@/components/Products/ImageZoom";
-import type { ProductType } from "@/data/type";
+import ImageZoom from "@web/components/Products/ImageZoom";
+import { ProductType } from "@web/data/type";
 import Link from "next/link";
 const ProductCard = ({ product }: { product: ProductType }) => {
   return (

@@ -1,7 +1,7 @@
 "use client";
 
-import categoriesData from "@/data/categoryData";
-import productsData from "@/data/productData";
+import categoriesData from "@web/data/categoryData";
+import productsData from "@web/data/productData";
 import { useState } from "react";
 import { ReactMixitup } from "react-mixitup";
 import ProductCard from "./ProductCard";

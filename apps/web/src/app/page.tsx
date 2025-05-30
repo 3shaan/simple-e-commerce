@@ -1,4 +1,4 @@
-import ProductCategory from "@web/components/HomePage/Category/ProductCategory";
+import PopulerProducts from "@web/components/HomePage/Products/PopulerProducts";
 import {
   HydrateClient,
   getQueryClient,
@@ -17,8 +17,8 @@ export default async function Home() {
   return (
     <HydrateClient>
       <HeroSlider />
-      <ProductCategory />
-      {/* <PopulerProducts /> */}
+      {/* <ProductCategory /> */}
+      <PopulerProducts />
       {/* <ProductsBanner /> */}
       {/* <ServicePage />
       // {/* <DealProducts /> */}
